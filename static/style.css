@@ -1,3 +1,5 @@
+@import url(book.css);
+
 @font-face {
     font-family: OpenSans;
     src: url(../assets/fonts/OpenSans-Regular.ttf);
@@ -43,6 +45,9 @@ header, main, footer {
 
 header {
     height: 10dvh;
+    .content {
+        padding: 0 clamp(16px, 12dvw, 160px);
+    }
 }
 
 footer {
@@ -57,4 +62,12 @@ main {
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
     }
+}
+
+table {
+    width: 100%;
+}
+
+.right {
+    text-align: right;
 }

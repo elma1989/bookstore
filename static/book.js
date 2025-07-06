@@ -13,6 +13,7 @@ export class Book {
         this.isbn = isbn;
         this.comments = comments;
     }
+    
     render() {
         const refMain = document.querySelector('main .content');
         const day = (this.release.getDate() < 10) ? '0' + this.release.getDate():this.release.getDate();

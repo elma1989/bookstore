@@ -1,22 +1,28 @@
 export function getBookCard(title, file, price, likes, author, release, isbn) {
     return /*html*/`
         <div class="book-card">
-            <h2>${title}</h2>
+            <div class="title">
+                <h2>${title}</h2>
+            </div>
             <hr>
-            <img src="${file}">
+            <div class="img-wrapper">
+                <img src="${file}">
+            </div>
             <hr>
-            <div>
+            <div class="price-like">
                 <span class="price">${price} &euro;</span>
-                <span class="likes">${likes}<img src="assets/icons/heart_empty.svg"></span>
+                <div class="likes">${likes}<img src="assets/icons/heart_empty.svg"></div>
             </div>
             <table>
                 <tr><td class="key">Author:</td><td class="value">${author}</td></tr>
-                <tr><td class="key">Erschienen:</td><td class="value">${release}</td></tr>
-                <tr><td class="key">ISBN:</td><td class="value">${isbn}</td></tr>
+                <tr><td class="key">Erschienen:</td><td class="value right">${release}</td></tr>
+                <tr><td class="key">ISBN:</td><td class="value right">${isbn}</td></tr>
             </table>
             <hr>
-            <h3>Kommentare</h3>
-            <table class="comments"></table>
+            <div class="comment-wrapper">
+                <h3>Kommentare</h3>
+                <table class="comments"></table>
+            </div>
         </div>
     `
 }

@@ -1,0 +1,51 @@
+.book-card {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    .title {
+        height: auto;
+        min-height: 80px;
+    }
+    .img-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        img{
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            object-position: center;
+            margin: 8px 0;
+        }
+    }
+    .price-like {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        .price {
+            color: #ff8080;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        .likes {
+            display: flex;
+            align-items: center;
+            img{
+                vertical-align: center;
+                width: 24px;
+                height: 24px;
+                margin-left: 8px;
+            }
+        }
+    }
+    .key, .user {
+        width: 33%;
+    }
+    .value, .message {
+        width: 66%;
+    }
+    .comment-wrapper {
+        padding: 16px 0;
+    }
+}
