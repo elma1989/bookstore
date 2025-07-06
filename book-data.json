@@ -44,20 +44,6 @@
                 }
             ]
         }, {
-            "title": "Harry Potter und der Stein der Weisen",
-            "author": "Joane K. Rowling",
-            "img": "stone_of_scholar.jpg",
-            "ISBN": "978-3551354013",
-            "published": "2005-01-23",
-            "price": 10.00,
-            "likes": 13259,
-            "comments": [
-                {
-                    "user": "Joanne K. Rowling",
-                    "message": "Mystisch phantastisch"
-                }
-            ]
-        }, {
             "title": "Die Wolke",
             "author": "Gudrun Pauswang",
             "img": "cloude.jpg",

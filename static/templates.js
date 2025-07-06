@@ -6,12 +6,12 @@ export function getBookCard(title, file, price, likes, author, release, isbn) {
             <img src="${file}">
             <hr>
             <div>
-                <span class="price">${price}</span>
+                <span class="price">${price} &euro;</span>
                 <span class="likes">${likes}<img src="assets/icons/heart_empty.svg"></span>
             </div>
             <table>
                 <tr><td class="key">Author:</td><td class="value">${author}</td></tr>
-                <tr><td class="key">Jahr:</td><td class="value">${release}</td></tr>
+                <tr><td class="key">Erschienen:</td><td class="value">${release}</td></tr>
                 <tr><td class="key">ISBN:</td><td class="value">${isbn}</td></tr>
             </table>
             <hr>

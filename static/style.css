@@ -36,7 +36,7 @@ header, main, footer {
     .content {
         width: 100%;
         max-width: 1920px;
-        padding: 32px clam(16px, 12dvw, 160px);
+        padding: 48px clamp(16px, 12dvw, 160px);
     }
 }
 
@@ -51,6 +51,8 @@ footer {
 main { 
     height: auto;
     min-height: 85dvh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
