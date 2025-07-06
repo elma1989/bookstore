@@ -15,6 +15,16 @@ export class Book {
     }
     render() {
         const refMain = document.querySelector('main .content');
-        refMain.innerHTML += getBookCard(this.title, this.img, this.price.toFixed(2), this.likes, this.author, this.release.toLocaleString('de-DE'), this.isbn);
+        const day = (this.release.getDate() < 10) ? '0' + this.release.getDate():this.release.getDate();
+        const month = ((this.release.getMonth() + 1) < 10) ? '0' + (this.release.getMonth() + 1):this.release.getMonth() + 1;
+        const year = this.release.getFullYear();
+        const date =`${day}.${month}.${year}`;
+        refMain.innerHTML += getBookCard(this.title, this.img, this.price.toFixed(2), this.likes, this.author, date, this.isbn);
+        this.comments.forEach(comment => {
+            const table = document.querySelectorAll('.comments');
+            const tr = document.createElement('tr');
+            tr.innerHTML = getSingleComment (comment.user, comment.message);
+            table[this.bookIndex].appendChild(tr);
+        });
     }
 }

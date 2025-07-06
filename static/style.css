@@ -24,6 +24,7 @@ html {
 body {
     background: #031a21;
     color: white;
+    font-size: 1.6rem;
 }
 
 h1 {
@@ -54,5 +55,6 @@ main {
     .content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
     }
 }
