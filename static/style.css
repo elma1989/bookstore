@@ -1,3 +1,13 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(../assets/fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(../assets/fonts/OpenSans-ExtraBold.ttf);
+    font-weight: bold;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +17,37 @@
     position: relative
 }
 
+html {
+    font: 10px OpenSans;
+}
+
 body {
     background: #031a21;
     color: white;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+header, main, footer {
+    display: flex;
+    justify-content: center;
+    .content {
+        width: 100%;
+        max-width: 1920px;
+    }
+}
+
+header {
+    height: 10dvh;
+}
+
+footer {
+    height: 5dvh;
+}
+
+main { 
+    height: auto;
+    min-height: 85dvh;
 }
