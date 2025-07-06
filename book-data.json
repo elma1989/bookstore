@@ -1,0 +1,104 @@
+{
+    "path": "assets/img/books/",
+    "books": [
+        {
+            "title": "Die Reise zum Mittelpunkt der Erde",
+            "author": "Jules Verne",
+            "img": "journey_middle_earth.jpg",
+            "ISBN": "978-3401716817",
+            "published": "1987-01-20",
+            "price": 10.00,
+            "likes": 4506,
+            "comments": [
+                {
+                    "user": "Jules Verne",
+                    "message": "Super Buch"
+                }
+            ]
+        }, {
+            "title": "Tintenherz",
+            "author": "Cornelia Funke",
+            "img": "incheart.jpg",
+            "ISBN": "978-3791504650",
+            "published": "2003-08-01",
+            "price": 23.00,
+            "likes": 4499,
+            "comments": [
+                {
+                    "user": "Cornelia Funke",
+                    "message": "Spannend, sehr zu empfehlen"
+                }
+            ]
+        }, {
+            "title": "Harry Potter und der Stein der Weisen",
+            "author": "Joane K. Rowling",
+            "img": "stone_of_scholar.jpg",
+            "ISBN": "978-3551354013",
+            "published": "2005-01-23",
+            "price": 10.00,
+            "likes": 13259,
+            "comments": [
+                {
+                    "user": "Joanne K. Rowling",
+                    "message": "Mystisch phantastisch"
+                }
+            ]
+        }, {
+            "title": "Harry Potter und der Stein der Weisen",
+            "author": "Joane K. Rowling",
+            "img": "stone_of_scholar.jpg",
+            "ISBN": "978-3551354013",
+            "published": "2005-01-23",
+            "price": 10.00,
+            "likes": 13259,
+            "comments": [
+                {
+                    "user": "Joanne K. Rowling",
+                    "message": "Mystisch phantastisch"
+                }
+            ]
+        }, {
+            "title": "Die Wolke",
+            "author": "Gudrun Pauswang",
+            "img": "cloude.jpg",
+            "ISBN": "3-473-35086-9",
+            "published": "1987-01-01",
+            "price": 8.99,
+            "likes": 1445,
+            "comments": [
+                {
+                    "user": "Gudrun Pausewang",
+                    "message": "Strahlend großartig"
+                }
+            ]
+        }, {
+            "title": "Die Welle",
+            "author": "Morton Rhue",
+            "img": "wave.jpg",
+            "ISBN": "978-3473580088",
+            "published": "1997-02-01",
+            "price": 9.99,
+            "likes": 4914,
+            "comments": [
+                {
+                    "user": "Morton Rhue",
+                    "message": "Absolute Disziplin"
+                }
+            ]
+        }, {
+            "title": "Die Blechtrommel",
+            "author": "Günter Grass",
+            "img": "tin_drum.jpg",
+            "ISBN": "978-3423118217",
+            "published": "1993-12-01",
+            "price": 16.00,
+            "likes": 582,
+            "comments": [
+                {
+                    "user": "Günter Grass",
+                    "message": "Schönes Buch vom kleinen Oskar"
+                }
+            ]
+        }
+    ]
+}
