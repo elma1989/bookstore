@@ -34,4 +34,29 @@ export class Book {
             table[this.bookIndex].appendChild(tr);
         });
     }
+
+    save() {
+        const stored = localStorage.getItem('books');
+        if (stored != null) {
+            const data = JSON.parse(stored);
+            data[this.bookIndex] = {
+                likes: this.likes,
+                liked: this.liked,
+                comments: this.comments
+            }
+            localStorage.setItem('books', JSON.stringify(data));
+        }
+    }
+
+    toggleLike() {
+        if (this.liked) {
+            this.likes--;
+            this.liked = false;
+        } else {
+            this.likes++;
+            this.liked = true;
+        }
+        this.save();
+        this.render();
+    }
 }

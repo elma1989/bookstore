@@ -5,7 +5,7 @@ const url = 'http://localhost:5500/book-data.json';
 const books = [];
 let storedBooks = []
 
-
+// #region storeagemanagement
 async function loadServerData() {
     const resp = await fetch(url);
     const data = await resp.json();
@@ -28,6 +28,7 @@ async function loadServerData() {
             book.ISBN, storedBooks[bookIndex].comments));
     });
     showAllBooks();
+    addAllEventlisteners();
 }
 
 function initialLocalStorage(toStore) {
@@ -44,6 +45,7 @@ function loadLocalStorage() {
         storedBooks = JSON.parse(store)
     }
 }
+// #endregion
 
 function showAllBooks() {
     const refMainContent = document.querySelector('main .content');
@@ -52,6 +54,15 @@ function showAllBooks() {
     books.forEach (book => {
         refMainContent.innerHTML += createBookCard();
         book.render();
+    });
+}
+
+function addAllEventlisteners() {
+    const refLikes = document.querySelectorAll('.likes');
+    refLikes.forEach((like, bookIndex) => {
+        like.addEventListener('click', () => {
+            books[bookIndex].toggleLike();
+        });
     });
 }
 

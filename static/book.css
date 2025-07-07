@@ -34,6 +34,7 @@
             font-weight: bold;
             font-size: 2rem;
         }
+
         .likes {
             display: flex;
             align-items: center;
@@ -42,8 +43,19 @@
                 width: 24px;
                 height: 24px;
                 margin-left: 8px;
+                cursor: pointer;
+            }
+            img:hover {
+                content: url(../assets/icons/heart_full.svg);
             }
         }
+        
+        .liked {
+            img {
+                content: url(../assets/icons/heart_full.svg);
+            }
+        }
+
     }
     .key, .user {
         width: 33%;
