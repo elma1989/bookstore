@@ -2,23 +2,27 @@ import { Book } from "./book.js";
 
 const url = 'http://localhost:5500/book-data.json';
 const books = [];
+let storedBooks = []
 
 
 async function loadServerData() {
     const resp = await fetch(url);
     const data = await resp.json();
+
+    loadLocalStorage();
+
     data.books.forEach( (book, bookIndex) => {
-        books.push(new Book(bookIndex, book.title, book.author, new Date(book.published), data.path + book.img, book.price, book.likes, book.ISBN, book.comments));
+        books.push(new Book(bookIndex, book.title, book.author, 
+            new Date(book.published), data.path + book.img, book.price, book.likes, storedBooks[bookIndex].liked, 
+            book.ISBN, storedBooks[bookIndex].comments));
     });
-    initialSaveLocalStorage();
     showAllBooks();
 }
 
-function initialSaveLocalStorage() {
+function loadLocalStorage() {
     const booksStorage = [];
-    const stored = localStorage.getItem('books');
-
-    if (stored == null) {
+    const store = localStorage.getItem('books');
+    if (store == null) {
         books.forEach(book => {
             booksStorage.push ({
                 liked: false,
@@ -26,6 +30,8 @@ function initialSaveLocalStorage() {
             });
         });
         localStorage.setItem('books', JSON.stringify(booksStorage));
+    } else {
+        storedBooks = JSON.parse(store)
     }
 }
 

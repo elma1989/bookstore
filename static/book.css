@@ -5,6 +5,9 @@
     background-color: #013440;
     border-radius: 8px;
     padding: 16px;
+    hr {
+        border: 1px solid #80ffff;
+    }
     .title {
         height: auto;
         min-height: 80px;
