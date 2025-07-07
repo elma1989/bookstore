@@ -10,7 +10,7 @@ export function getBookCard(title, file, price, likes, author, release, isbn) {
             </div>
             <hr>
             <div class="price-like">
-                <span class="price">${price} &euro;</span>
+                <span class="price">${price}</span>
                 <div class="likes">${likes}<img src="assets/icons/heart_empty.svg"></div>
             </div>
             <table>

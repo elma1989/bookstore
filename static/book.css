@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     height: 450px;
+    background-color: #013440;
+    border-radius: 8px;
+    padding: 16px;
     .title {
         height: auto;
         min-height: 80px;
@@ -47,5 +50,11 @@
     }
     .comment-wrapper {
         padding: 16px 0;
+        h3 {
+            margin-bottom: 8px;
+        }
+        tr {
+            vertical-align: top;
+        }
     }
 }

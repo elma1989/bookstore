@@ -20,7 +20,7 @@ export class Book {
         const month = ((this.release.getMonth() + 1) < 10) ? '0' + (this.release.getMonth() + 1):this.release.getMonth() + 1;
         const year = this.release.getFullYear();
         const date =`${day}.${month}.${year}`;
-        refMain.innerHTML += getBookCard(this.title, this.img, this.price.toFixed(2), this.likes, this.author, date, this.isbn);
+        refMain.innerHTML += getBookCard(this.title, this.img, new Intl.NumberFormat('de-DE', {style:'currency', currency: 'EUR'}).format(this.price), this.likes, this.author, date, this.isbn);
         this.comments.forEach(comment => {
             const table = document.querySelectorAll('.comments');
             const tr = document.createElement('tr');
