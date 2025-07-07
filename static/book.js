@@ -15,13 +15,13 @@ export class Book {
     }
     
     render() {
-        const refMain = document.querySelector('main .content');
+        const refBookCard = document.querySelectorAll('.book-card');
         const day = (this.release.getDate() < 10) ? '0' + this.release.getDate():this.release.getDate();
         const month = ((this.release.getMonth() + 1) < 10) ? '0' + (this.release.getMonth() + 1):this.release.getMonth() + 1;
         const year = this.release.getFullYear();
         const date =`${day}.${month}.${year}`;
 
-        refMain.innerHTML += getBookCard(this.title, this.img, new Intl.NumberFormat('de-DE', {style:'currency', currency: 'EUR'}).format(this.price), this.likes, this.author, date, this.isbn);
+        refBookCard[this.bookIndex].innerHTML = getBookCard(this.title, this.img, new Intl.NumberFormat('de-DE', {style:'currency', currency: 'EUR'}).format(this.price), this.likes, this.author, date, this.isbn);
         const refHeart = document.querySelectorAll('.likes');
         if (this.liked) {
             refHeart[this.bookIndex].classList.add('liked');
