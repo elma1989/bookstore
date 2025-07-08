@@ -91,7 +91,6 @@ export class Book {
                 user: user,
                 message: message
             });
-            // refErr[this.bookIndex].textContent = '';
             this.save();
             this.render();
         } else {

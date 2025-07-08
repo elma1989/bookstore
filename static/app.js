@@ -1,7 +1,7 @@
 import { Book } from "./book.js";
 import { createBookCard } from "./templates.js";
 
-const url = 'http://localhost:5500/book-data.json';
+const url = 'https://marco-elste.developerakademie.net/bookstore/book-data.json';
 const books = [];
 let storedBooks = []
 

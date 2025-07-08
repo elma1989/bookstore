@@ -21,7 +21,7 @@ export function getBookCard(title, file, price, likes, author, release, isbn) {
         <table>
             <tr><td class="key">Author:</td><td class="value">${author}</td></tr>
             <tr><td class="key">Erschienen:</td><td class="value right">${release}</td></tr>
-            <tr><td class="key">ISBN:</td><td class="value right">${isbn}</td></tr>
+            <tr><td class="key isbn">ISBN:</td><td class="value isbn-value right">${isbn}</td></tr>
         </table>
         <hr>
         <div class="comment-wrapper">

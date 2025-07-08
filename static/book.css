@@ -1,7 +1,7 @@
 .book-card {
     display: flex;
     flex-direction: column;
-    height: 450px;
+    height: 500px;
     background-color: #013440;
     border-radius: 8px;
     padding: 16px;
@@ -11,6 +11,18 @@
     .title {
         height: auto;
         min-height: 80px;
+        h2{
+            font-size: 2.4rem;
+            @media (max-width: 1300px) {
+                font-size: 2rem;
+            }
+            @media (max-width: 370px) {
+                font-size: 1.6rem;
+            }
+        }
+        @media (max-width: 370px) {
+            min-height: 60px;
+        }
     }
     .img-wrapper {
         display: flex;
@@ -55,18 +67,32 @@
                 content: url(../assets/icons/heart_full.svg);
             }
         }
-
     }
+
+    table {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
     .key, .user {
         width: 33%;
     }
     .value, .message {
         width: 66%;
     }
+    @media (max-width: 370px) {
+        .isbn {
+            width: 20%;
+        }
+        .isbn-value {
+            width: 80%;
+        }
+    }
     .comment-wrapper {
         padding: 16px 0;
-        overflow-y: scroll;
+        overflow-y: auto;
         h3 {
+            font-size: 1.6rem;
             margin-bottom: 8px;
         }
         tr {
@@ -115,5 +141,8 @@
     .comment-wrapper::-webkit-scrollbar-track{
         background: #c0ffff;
         border-radius: 8px;
+    }
+    @media (max-width: 700px) {
+        height: 85dvh;
     }
 }
