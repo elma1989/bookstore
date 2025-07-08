@@ -28,7 +28,6 @@ async function loadServerData() {
             book.ISBN, storedBooks[bookIndex].comments));
     });
     showAllBooks();
-    addAllEventlisteners();
 }
 
 function initialLocalStorage(toStore) {
@@ -51,18 +50,12 @@ function showAllBooks() {
     const refMainContent = document.querySelector('main .content');
     refMainContent.innerHTML = '';
 
-    books.forEach (book => {
+    for (let i = 0; i < books.length; i++) {
         refMainContent.innerHTML += createBookCard();
-        book.render();
-    });
-}
+    }
 
-function addAllEventlisteners() {
-    const refLikes = document.querySelectorAll('.likes');
-    refLikes.forEach((like, bookIndex) => {
-        like.addEventListener('click', () => {
-            books[bookIndex].toggleLike();
-        });
+    books.forEach(book => {
+        book.render();
     });
 }
 

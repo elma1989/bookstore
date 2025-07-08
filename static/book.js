@@ -32,6 +32,15 @@ export class Book {
             const tr = document.createElement('tr');
             tr.innerHTML = getSingleComment (comment.user, comment.message);
             table[this.bookIndex].appendChild(tr);
+
+        this.addCardEvents();
+        });
+    }
+
+    addCardEvents() {
+        const refLikes = document.querySelectorAll('.likes img');
+        refLikes[this.bookIndex].addEventListener('click', () => {
+            this.toggleLike();
         });
     }
 
