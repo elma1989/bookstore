@@ -27,6 +27,11 @@ export function getBookCard(title, file, price, likes, author, release, isbn) {
         <div class="comment-wrapper">
             <h3>Kommentare</h3>
             <table class="comments"></table>
+            <form>
+                <input type="text" placeholder="Nutzer : Kommentar">
+                <input type="submit" value="&crarr;">
+                <div class="errmsg"></div>
+            </form>
         </div>
     `
 }

@@ -65,11 +65,55 @@
     }
     .comment-wrapper {
         padding: 16px 0;
+        overflow-y: scroll;
         h3 {
             margin-bottom: 8px;
         }
         tr {
             vertical-align: top;
         }
+        form {
+            margin-top: 16px;
+            input[type=text] {
+                width: 80%;
+                background: transparent;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #c0ffff;
+                padding: 4px 8px;
+                color: #c0ffff;
+                size: 2rem;
+                font: 1.6rem OpenSans;
+            }
+            input[type=text]::placeholder {
+                color: #c0ffff;
+            }
+            input[type=submit] {
+                margin-left: 8px;
+                background: #c0ffff;
+                color: #031a21;
+                border: none;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+            }
+            .errmsg {
+                height: 1.6rem;
+                width: 100%;
+                color: red;
+                margin-top: 4px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .comment-wrapper::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .comment-wrapper::-webkit-scrollbar-track{
+        background: #c0ffff;
+        border-radius: 8px;
     }
 }
