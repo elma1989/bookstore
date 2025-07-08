@@ -91,11 +91,11 @@ export class Book {
                 user: user,
                 message: message
             });
-            refErr[this.bookIndex].textContent = '';
+            // refErr[this.bookIndex].textContent = '';
             this.save();
             this.render();
         } else {
-            refErr[this.bookIndex].textContent = 'Format Nutzer : Kommentar verwenden!';
+            refErr[this.bookIndex].innerHTML = 'Format verenden:</br>Nutzer : Kommentar';
         }
     }
 }
