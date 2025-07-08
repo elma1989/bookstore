@@ -38,6 +38,6 @@ export function getBookCard(title, file, price, likes, author, release, isbn) {
 
 export function getSingleComment(user, message) {
     return /*html*/`
-        <td class="user">${user}</td><td class="message">${message}</td>
+        <td class="user">${user}: </td><td class="message">${message}</td>
     `
 }

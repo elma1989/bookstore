@@ -39,9 +39,14 @@ export class Book {
 
     addCardEvents() {
         const refLikes = document.querySelectorAll('.likes img');
+
         refLikes[this.bookIndex].addEventListener('click', () => {
             this.toggleLike();
         });
+        document.forms[this.bookIndex].addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.addComment();
+        })
     }
 
     save() {
@@ -67,5 +72,30 @@ export class Book {
         }
         this.save();
         this.render();
+    }
+
+    addComment() {
+        const refInput = document.querySelectorAll('input[type=text]');
+        const userInput = refInput[this.bookIndex].value;
+        const refErr = document.querySelectorAll('.errmsg');
+        const regex = /\w : \w/i;
+        let i = 0
+        
+        if (regex.test(userInput)) {
+            for (i; i < userInput.length; i++) {
+                if (userInput[i] == ':') break;
+            }
+            const user = userInput.substring(0, i - 1);
+            const message = userInput.substring(i + 2, userInput.length);
+            this.comments.push({
+                user: user,
+                message: message
+            });
+            refErr[this.bookIndex].textContent = '';
+            this.save();
+            this.render();
+        } else {
+            refErr[this.bookIndex].textContent = 'Format Nutzer : Kommentar verwenden!';
+        }
     }
 }
