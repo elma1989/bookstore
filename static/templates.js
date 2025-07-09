@@ -35,6 +35,8 @@ export function getBookCardBody(price, likes, author, release, isbn) {
         <div class="comment-wrapper">
             <h3>Kommentare</h3>
             <table class="comments"></table>
+        </div>
+        <div class="comment-input">
             <form>
                 <input type="text" placeholder="Nutzer : Kommentar">
                 <input type="submit" value="&crarr;">

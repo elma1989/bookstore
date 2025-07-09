@@ -2,145 +2,153 @@
     display: flex;
     flex-direction: column;
     height: 500px;
+    width: 100%;
     background-color: #013440;
     border-radius: 8px;
     padding: 16px;
-    hr {
-        border: 1px solid #80ffff;
-    }
-    .title {
-        height: auto;
-        min-height: 80px;
-        h2{
-            font-size: 2.4rem;
-            @media (max-width: 1300px) {
-                font-size: 2rem;
+    .bc-head {
+        hr {
+            border: 1px solid #80ffff;
+        }
+        .title {
+            height: auto;
+            min-height: 80px;
+            h2{
+                font-size: 2.4rem;
+                @media (max-width: 1300px) {
+                    font-size: 2rem;
+                }
+                @media (max-width: 370px) {
+                    font-size: 1.6rem;
+                }
             }
             @media (max-width: 370px) {
-                font-size: 1.6rem;
+                min-height: 60px;
             }
+        }
+        .img-wrapper {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            img{
+                width: 80px;
+                height: 100px;
+                object-fit: cover;
+                object-position: center;
+                margin: 8px 0;
+            }
+        }
+    }
+    .bc-body {
+        .price-like {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            .price {
+                color: #ff8080;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+
+            .likes {
+                display: flex;
+                align-items: center;
+                img{
+                    vertical-align: center;
+                    width: 24px;
+                    height: 24px;
+                    margin-left: 8px;
+                    cursor: pointer;
+                }
+                img:hover {
+                    content: url(../assets/icons/heart_full.svg);
+                }
+            }
+            
+            .liked {
+                img {
+                    content: url(../assets/icons/heart_full.svg);
+                }
+            }
+        }
+
+        table {
+            margin-bottom: 8px;
+            width: 100%;
+        }
+
+        .key, .user {
+            width: 33%;
+        }
+        .value, .message {
+            width: 66%;
         }
         @media (max-width: 370px) {
-            min-height: 60px;
-        }
-    }
-    .img-wrapper {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        img{
-            width: 80px;
-            height: 100px;
-            object-fit: cover;
-            object-position: center;
-            margin: 8px 0;
-        }
-    }
-    .price-like {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px 0;
-        .price {
-            color: #ff8080;
-            font-weight: bold;
-            font-size: 2rem;
-        }
-
-        .likes {
-            display: flex;
-            align-items: center;
-            img{
-                vertical-align: center;
-                width: 24px;
-                height: 24px;
-                margin-left: 8px;
-                cursor: pointer;
+            .isbn {
+                width: 20%;
             }
-            img:hover {
-                content: url(../assets/icons/heart_full.svg);
-            }
-        }
-        
-        .liked {
-            img {
-                content: url(../assets/icons/heart_full.svg);
-            }
-        }
-    }
-
-    table {
-        margin-bottom: 8px;
-        width: 100%;
-    }
-
-    .key, .user {
-        width: 33%;
-    }
-    .value, .message {
-        width: 66%;
-    }
-    @media (max-width: 370px) {
-        .isbn {
-            width: 20%;
-        }
-        .isbn-value {
-            width: 80%;
-        }
-    }
-    .comment-wrapper {
-        padding: 16px 0;
-        overflow-y: auto;
-        h3 {
-            font-size: 1.6rem;
-            margin-bottom: 8px;
-        }
-        tr {
-            vertical-align: top;
-        }
-        form {
-            margin-top: 16px;
-            input[type=text] {
+            .isbn-value {
                 width: 80%;
-                background: transparent;
-                outline: none;
-                border: none;
-                border-bottom: 1px solid #c0ffff;
-                padding: 4px 8px;
-                color: #c0ffff;
-                size: 2rem;
-                font: 1.6rem OpenSans;
-            }
-            input[type=text]::placeholder {
-                color: #c0ffff;
-            }
-            input[type=submit] {
-                margin-left: 8px;
-                background: #c0ffff;
-                color: #031a21;
-                border: none;
-                border-radius: 50%;
-                width: 24px;
-                height: 24px;
-                cursor: pointer;
-            }
-            .errmsg {
-                height: 3.6rem;
-                width: 100%;
-                color: red;
-                margin-top: 4px;
-                font-weight: bold;
             }
         }
-    }
+        .comment-wrapper {
+            padding: 16px 0;
+            height: 100px;
+            overflow-y: auto;
+            h3 {
+                font-size: 1.6rem;
+                margin-bottom: 8px;
+            }
+            tr {
+                vertical-align: top;
+            }
+        }
 
-    .comment-wrapper::-webkit-scrollbar {
-        width: 8px;
-    }
+        .comment-wrapper::-webkit-scrollbar {
+            width: 8px;
+        }
 
-    .comment-wrapper::-webkit-scrollbar-track{
-        background: #c0ffff;
-        border-radius: 8px;
+        .comment-wrapper::-webkit-scrollbar-track{
+            background: #c0ffff;
+            border-radius: 8px;
+        }
+        .comment-input {
+            form {
+                margin-top: 16px;
+                input[type=text] {
+                    width: 80%;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid #c0ffff;
+                    padding: 4px 8px;
+                    color: #c0ffff;
+                    size: 2rem;
+                    font: 1.6rem OpenSans;
+                }
+                input[type=text]::placeholder {
+                    color: #c0ffff;
+                }
+                input[type=submit] {
+                    margin-left: 8px;
+                    background: #c0ffff;
+                    color: #031a21;
+                    border: none;
+                    border-radius: 50%;
+                    width: 24px;
+                    height: 24px;
+                    cursor: pointer;
+                }
+                .errmsg {
+                    height: 3.6rem;
+                    width: 100%;
+                    color: red;
+                    margin-top: 4px;
+                    font-weight: bold;
+                }
+            }
+        }
     }
     @media (max-width: 700px) {
         height: 85dvh;
