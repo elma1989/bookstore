@@ -1,10 +1,13 @@
 export function createBookCard() {
     return /*html*/`
-        <div class="book-card"></div>
+        <div class="book-card">
+            <div class="bc-head"></div>
+            <div class="bc-body"></div>
+        </div>
     `
 }
 
-export function getBookCard(title, file, price, likes, author, release, isbn) {
+export function getBookCardHead(title, file) {
     return /*html*/`
         <div class="title">
             <h2>${title}</h2>
@@ -14,6 +17,11 @@ export function getBookCard(title, file, price, likes, author, release, isbn) {
             <img src="${file}">
         </div>
         <hr>
+    `
+}
+
+export function getBookCardBody(price, likes, author, release, isbn) {
+    return /*html*/`
         <div class="price-like">
             <span class="price">${price}</span>
             <div class="likes">${likes}<img src="assets/icons/heart_empty.svg"></div>

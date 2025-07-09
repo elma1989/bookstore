@@ -1,7 +1,7 @@
 import { Book } from "./book.js";
 import { createBookCard } from "./templates.js";
 
-const url = 'https://marco-elste.developerakademie.net/bookstore/book-data.json';
+const url = 'http://localhost:5500/book-data.json';
 const books = [];
 let storedBooks = []
 
@@ -55,7 +55,8 @@ function showAllBooks() {
     }
 
     books.forEach(book => {
-        book.render();
+        book.renderHead();
+        book.renderBody();
     });
 }
 
