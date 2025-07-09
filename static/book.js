@@ -33,14 +33,16 @@ export class Book {
             refHeart[this.bookIndex].classList.add('liked');
         }
 
+        //Commentes
+        const table = document.querySelectorAll('.comments');
+
         this.comments.forEach(comment => {
-            const table = document.querySelectorAll('.comments');
             const tr = document.createElement('tr');
             tr.innerHTML = getSingleComment (comment.user, comment.message);
             table[this.bookIndex].appendChild(tr);
+        });
 
         this.addCardEvents();
-        });
     }
 
     addCardEvents() {
@@ -83,25 +85,18 @@ export class Book {
 
     addComment() {
         const refInput = document.querySelectorAll('input[type=text]');
-        const userInput = refInput[this.bookIndex].value;
         const refErr = document.querySelectorAll('.errmsg');
-        const regex = /\w : \w/i;
-        let i = 0
+        const userInput = refInput[this.bookIndex].value;
         
-        if (regex.test(userInput)) {
-            for (i; i < userInput.length; i++) {
-                if (userInput[i] == ':') break;
-            }
-            const user = userInput.substring(0, i - 1);
-            const message = userInput.substring(i + 2, userInput.length);
+        if (userInput.length > 0) {
             this.comments.push({
-                user: user,
-                message: message
+                user: 'User',
+                message: userInput
             });
             this.save();
             this.renderBody();
         } else {
-            refErr[this.bookIndex].innerHTML = 'Format verenden:</br>Nutzer : Kommentar';
+            refErr[this.bookIndex].innerHTML = 'Kommentar muss eingegeben werden!';
         }
     }
     // #endregion

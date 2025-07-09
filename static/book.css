@@ -1,15 +1,15 @@
 .book-card {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 600px;
     width: 100%;
     background-color: #013440;
     border-radius: 8px;
     padding: 16px;
-    .bc-head {
-        hr {
-            border: 1px solid #80ffff;
+    hr {
+        border: 1px solid #80ffff;
         }
+    .bc-head {
         .title {
             height: auto;
             min-height: 80px;
@@ -31,11 +31,15 @@
             width: 100%;
             justify-content: center;
             img{
-                width: 80px;
-                height: 100px;
+                width: 120px;
+                height: 150px;
                 object-fit: cover;
                 object-position: center;
                 margin: 8px 0;
+                @media (max-width: 700px) {
+                    width: 200px;
+                    height: 250px;
+                }
             }
         }
     }
@@ -94,7 +98,7 @@
         }
         .comment-wrapper {
             padding: 16px 0;
-            height: 100px;
+            height: 96px;
             overflow-y: auto;
             h3 {
                 font-size: 1.6rem;
@@ -102,6 +106,9 @@
             }
             tr {
                 vertical-align: top;
+            }
+            @media (max-width: 340px) {
+                height: 88px;
             }
         }
 
@@ -151,6 +158,6 @@
         }
     }
     @media (max-width: 700px) {
-        height: 85dvh;
+        height: 90dvh;
     }
 }

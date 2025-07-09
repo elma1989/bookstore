@@ -27,7 +27,7 @@ export function getBookCardBody(price, likes, author, release, isbn) {
             <div class="likes">${likes}<img src="assets/icons/heart_empty.svg"></div>
         </div>
         <table>
-            <tr><td class="key">Author:</td><td class="value">${author}</td></tr>
+            <tr><td class="key">Author:</td><td class="value right">${author}</td></tr>
             <tr><td class="key">Erschienen:</td><td class="value right">${release}</td></tr>
             <tr><td class="key isbn">ISBN:</td><td class="value isbn-value right">${isbn}</td></tr>
         </table>
@@ -38,7 +38,7 @@ export function getBookCardBody(price, likes, author, release, isbn) {
         </div>
         <div class="comment-input">
             <form>
-                <input type="text" placeholder="Nutzer : Kommentar">
+                <input type="text" placeholder="Kommentar">
                 <input type="submit" value="&crarr;">
                 <div class="errmsg"></div>
             </form>
