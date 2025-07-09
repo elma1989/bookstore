@@ -13,7 +13,8 @@ export class Book {
         this.isbn = isbn;
         this.comments = comments;
     }
-    
+    // #region methods
+    // #region cardManagement
     render() {
         const refBookCard = document.querySelectorAll('.book-card');
         const day = (this.release.getDate() < 10) ? '0' + this.release.getDate():this.release.getDate();
@@ -61,7 +62,8 @@ export class Book {
             localStorage.setItem('books', JSON.stringify(data));
         }
     }
-
+    // #endregion
+    // #region userActions
     toggleLike() {
         if (this.liked) {
             this.likes--;
@@ -97,4 +99,6 @@ export class Book {
             refErr[this.bookIndex].innerHTML = 'Format verenden:</br>Nutzer : Kommentar';
         }
     }
+    // #endregion
+// #endregion
 }
